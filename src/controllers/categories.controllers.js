@@ -33,7 +33,6 @@ const postCategories = async (req, res) => {
 
     try {
         const categories = await connection.query(`SELECT name FROM categories WHERE name='${name}'`)
-        console.log(categories.rows);
 
         if(categories.rows.length > 0) {
             return res.sendStatus(409);
